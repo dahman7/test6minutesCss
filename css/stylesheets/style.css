@@ -1,0 +1,27 @@
+/* line 2, ../sass/style.scss */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+/* line 7, ../sass/style.scss */
+.container {
+  margin: 20px auto;
+  background-color: white;
+}
+
+/* line 11, ../sass/style.scss */
+.accordion {
+  position: relative;
+  margin: 60px auto;
+  width: 80%;
+}
+/* line 15, ../sass/style.scss */
+.accordion li {
+  list-style: none;
+}
+/* line 17, ../sass/style.scss */
+.accordion li h2, .accordion li p {
+  display: none;
+}
