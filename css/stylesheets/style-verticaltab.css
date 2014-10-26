@@ -1,0 +1,72 @@
+/* line 8, ../sass/style-verticaltab.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 12, ../sass/style-verticaltab.scss */
+body {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* line 15, ../sass/style-verticaltab.scss */
+.verticalTabs {
+  clear: both;
+}
+
+/* line 19, ../sass/style-verticaltab.scss */
+.vtab label {
+  padding: 12px 10px 12px 0;
+  position: relative;
+  display: block;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  font-weight: normal;
+  font-weight: 600;
+  width: 25%;
+  min-width: 90px;
+  cursor: pointer;
+  padding-left: 10px;
+  border-top: 2px solid white;
+}
+/* line 33, ../sass/style-verticaltab.scss */
+.vtab [type=radio] {
+  display: none;
+}
+/* line 37, ../sass/style-verticaltab.scss */
+.vtab .content {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  background: white;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+}
+/* line 45, ../sass/style-verticaltab.scss */
+.vtab .content h2 {
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0 0 10px 0;
+}
+/* line 49, ../sass/style-verticaltab.scss */
+.vtab .content p {
+  text-align: justify;
+}
+
+/* line 54, ../sass/style-verticaltab.scss */
+[type=radio]:checked ~ label {
+  background: white;
+  border-bottom: 1px solid white;
+  z-index: 2;
+}
+/* line 58, ../sass/style-verticaltab.scss */
+[type=radio]:checked ~ label ~ .content {
+  z-index: 1;
+}
+
+@media screen and (max-width: 380px) {
+  /* line 63, ../sass/style-verticaltab.scss */
+  .vtab .content {
+    left: 100px;
+  }
+}

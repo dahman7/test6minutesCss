@@ -1,27 +1,122 @@
-/* line 2, ../sass/style.scss */
+/* line 16, ../sass/style.scss */
 body {
   margin: 0;
   padding: 0;
-  background-color: black;
 }
 
-/* line 7, ../sass/style.scss */
+/* line 20, ../sass/style.scss */
 .container {
   margin: 20px auto;
   background-color: white;
 }
 
-/* line 11, ../sass/style.scss */
+/* line 25, ../sass/style.scss */
 .accordion {
-  position: relative;
-  margin: 60px auto;
-  width: 80%;
-}
-/* line 15, ../sass/style.scss */
-.accordion li {
+  width: 600px;
+  float: none;
   list-style: none;
+  position: relative;
+  padding: 0;
+  margin: 75px auto;
 }
-/* line 17, ../sass/style.scss */
-.accordion li h2, .accordion li p {
+/* line 32, ../sass/style.scss */
+.accordion li {
+  float: left;
+  width: 198px;
+  margin-right: 2px;
+}
+/* line 36, ../sass/style.scss */
+.accordion li .acc-tab-content {
+  z-index: 2;
   display: none;
+  text-align: left;
+  width: 100%;
+  font-size: 20px;
+  line-height: 140%;
+  padding-top: 10px;
+  background: white;
+  padding: 15px;
+  color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 50px;
+  left: 0;
+  box-sizing: border-box;
+  animation-duration: 0.5s;
+}
+/* line 53, ../sass/style.scss */
+.accordion li .acc-tab-content h2 {
+  color: rgba(0, 0, 0, 0.7);
+  margin: 10px 0 10px 0;
+}
+/* line 57, ../sass/style.scss */
+.accordion li .acc-tab-content p {
+  text-align: justify;
+}
+/* line 62, ../sass/style.scss */
+.accordion li:last-child {
+  margin-right: 0px;
+}
+/* line 65, ../sass/style.scss */
+.accordion label {
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 24px;
+  font-weight: normal;
+  font-family: Arial, helveti;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  position: relative;
+  top: 3px;
+  transition: all 0.2s ease-in-out;
+}
+/* line 79, ../sass/style.scss */
+.accordion label:hover {
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+}
+
+/* line 86, ../sass/style.scss */
+.accordion input[type=radio] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* line 92, ../sass/style.scss */
+[id^=acc-tab]:checked + label {
+  background: white;
+  color: rgba(0, 0, 0, 0.4);
+  top: 0;
+}
+/* line 97, ../sass/style.scss */
+[id^=acc-tab]:checked ~ [id^=acc-tab-content] {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 103, ../sass/style.scss */
+  .accordion {
+    width: 280px;
+    float: none;
+    list-style: none;
+    position: relative;
+    padding: 0;
+    margin: 40px auto;
+  }
+  /* line 110, ../sass/style.scss */
+  .accordion li {
+    width: 280px;
+    margin-right: 0px;
+    margin-bottom: 2px;
+  }
+  /* line 114, ../sass/style.scss */
+  .accordion li .acc-tab-content {
+    position: relative;
+    padding-top: 0px;
+    top: 0;
+    left: 0;
+  }
 }
